@@ -1,0 +1,84 @@
+Requirements
+g1:
+sub2 : 2
+sub3 : 3
+sub4 : 2
+sub5 : 2
+sub6 : 3
+sub7 : 2
+
+g2:
+sub1 : 3
+sub2 : 1
+sub3 : 1
+
+g3:
+sub2 : 3
+sub3 : 1
+sub4 : 3
+sub5 : 1
+
+g4:
+sub1 : 3
+sub4 : 2
+sub6 : 2
+
+g5:
+sub2 : 1
+sub4 : 2
+sub5 : 3
+sub6 : 3
+sub7 : 3
+
+g6:
+sub1 : 2
+sub2 : 2
+sub3 : 1
+sub4 : 1
+sub5 : 1
+sub7 : 3
+
+g7:
+sub1 : 2
+sub2 : 2
+sub3 : 2
+sub4 : 3
+sub5 : 3
+sub6 : 2
+sub7 : 3
+
+prof1 - 9
+prof2 - 19
+prof3 - 13
+prof4 - 6
+prof5 - 5
+
+sub1:
+	prof2
+	prof3
+
+sub2:
+	prof1
+	prof2
+
+sub3:
+	prof1
+	prof2
+	prof3
+	prof4
+	prof5
+
+sub4:
+	prof1
+
+sub5:
+	prof1
+	prof3
+
+sub6:
+	prof1
+
+sub7:
+	prof2
+	prof3
+

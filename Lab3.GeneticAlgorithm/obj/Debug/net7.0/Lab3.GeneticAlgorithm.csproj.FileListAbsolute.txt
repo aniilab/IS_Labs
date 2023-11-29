@@ -1,0 +1,14 @@
+D:\Uni\4th\IS\IS_Labs\Lab3.GeneticAlgorithm\obj\Debug\net7.0\Lab3.GeneticAlgorithm.GeneratedMSBuildEditorConfig.editorconfig
+D:\Uni\4th\IS\IS_Labs\Lab3.GeneticAlgorithm\obj\Debug\net7.0\Lab3.GeneticAlgorithm.AssemblyInfoInputs.cache
+D:\Uni\4th\IS\IS_Labs\Lab3.GeneticAlgorithm\obj\Debug\net7.0\Lab3.GeneticAlgorithm.AssemblyInfo.cs
+D:\Uni\4th\IS\IS_Labs\Lab3.GeneticAlgorithm\obj\Debug\net7.0\Lab3.GeneticAlgorithm.csproj.CoreCompileInputs.cache
+D:\Uni\4th\IS\IS_Labs\Lab3.GeneticAlgorithm\bin\Debug\net7.0\Lab3.GeneticAlgorithm.exe
+D:\Uni\4th\IS\IS_Labs\Lab3.GeneticAlgorithm\bin\Debug\net7.0\Lab3.GeneticAlgorithm.deps.json
+D:\Uni\4th\IS\IS_Labs\Lab3.GeneticAlgorithm\bin\Debug\net7.0\Lab3.GeneticAlgorithm.runtimeconfig.json
+D:\Uni\4th\IS\IS_Labs\Lab3.GeneticAlgorithm\bin\Debug\net7.0\Lab3.GeneticAlgorithm.dll
+D:\Uni\4th\IS\IS_Labs\Lab3.GeneticAlgorithm\bin\Debug\net7.0\Lab3.GeneticAlgorithm.pdb
+D:\Uni\4th\IS\IS_Labs\Lab3.GeneticAlgorithm\obj\Debug\net7.0\Lab3.GeneticAlgorithm.dll
+D:\Uni\4th\IS\IS_Labs\Lab3.GeneticAlgorithm\obj\Debug\net7.0\refint\Lab3.GeneticAlgorithm.dll
+D:\Uni\4th\IS\IS_Labs\Lab3.GeneticAlgorithm\obj\Debug\net7.0\Lab3.GeneticAlgorithm.pdb
+D:\Uni\4th\IS\IS_Labs\Lab3.GeneticAlgorithm\obj\Debug\net7.0\Lab3.GeneticAlgorithm.genruntimeconfig.cache
+D:\Uni\4th\IS\IS_Labs\Lab3.GeneticAlgorithm\obj\Debug\net7.0\ref\Lab3.GeneticAlgorithm.dll

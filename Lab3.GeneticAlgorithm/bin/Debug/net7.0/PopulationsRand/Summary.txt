@@ -1,0 +1,49 @@
+Summary
+----------------
+Score: 57
+g1:
+sub2 : 1
+sub3 : 1
+sub5 : 2
+sub7 : 2
+
+g2:
+sub1 : 3
+sub2 : 1
+sub3 : 1
+
+g3:
+sub2 : 3
+sub3 : 1
+sub4 : 1
+sub5 : 1
+
+g4:
+sub1 : 2
+sub4 : 1
+sub6 : 1
+
+g5:
+sub4 : 1
+sub5 : 3
+
+g6:
+sub1 : 1
+sub2 : 1
+sub5 : 1
+sub7 : 2
+
+g7:
+sub2 : 1
+sub6 : 2
+sub7 : 1
+
+prof1 - 9
+prof2 - 11
+prof3 - 11
+prof4 - 1
+prof5 - 2
+Overlays for professors: 0
+Overlays for groups: 0
+----------------
+10000

@@ -1,0 +1,15 @@
+D:\Uni\4th\IS\IS_Labs\Lab2.Pacman\Pacman\bin\Debug\Pacman.exe.config
+D:\Uni\4th\IS\IS_Labs\Lab2.Pacman\Pacman\bin\Debug\Pacman.exe
+D:\Uni\4th\IS\IS_Labs\Lab2.Pacman\Pacman\bin\Debug\Pacman.pdb
+D:\Uni\4th\IS\IS_Labs\Lab2.Pacman\Pacman\bin\Debug\nunit.framework.dll
+D:\Uni\4th\IS\IS_Labs\Lab2.Pacman\Pacman\bin\Debug\WPFMediaKit.dll
+D:\Uni\4th\IS\IS_Labs\Lab2.Pacman\Pacman\bin\Debug\nunit.framework.pdb
+D:\Uni\4th\IS\IS_Labs\Lab2.Pacman\Pacman\bin\Debug\nunit.framework.xml
+D:\Uni\4th\IS\IS_Labs\Lab2.Pacman\Pacman\obj\Debug\Pacman.csproj.AssemblyReference.cache
+D:\Uni\4th\IS\IS_Labs\Lab2.Pacman\Pacman\obj\Debug\Pacman.Form1.resources
+D:\Uni\4th\IS\IS_Labs\Lab2.Pacman\Pacman\obj\Debug\Pacman.Properties.Resources.resources
+D:\Uni\4th\IS\IS_Labs\Lab2.Pacman\Pacman\obj\Debug\Pacman.csproj.GenerateResource.cache
+D:\Uni\4th\IS\IS_Labs\Lab2.Pacman\Pacman\obj\Debug\Pacman.csproj.CoreCompileInputs.cache
+D:\Uni\4th\IS\IS_Labs\Lab2.Pacman\Pacman\obj\Debug\Pacman.csproj.CopyComplete
+D:\Uni\4th\IS\IS_Labs\Lab2.Pacman\Pacman\obj\Debug\Pacman.exe
+D:\Uni\4th\IS\IS_Labs\Lab2.Pacman\Pacman\obj\Debug\Pacman.pdb
