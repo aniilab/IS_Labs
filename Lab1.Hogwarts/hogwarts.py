@@ -20,48 +20,37 @@ voldemort = Character(name="Voldemort")
 characters = [harry, hermione, ron, draco, voldemort]
 
 # Hogwarts predicates
-is_wizard = "is_wizard"
+has_wizard_parents = "has_wizard_parents"
 is_brave = "is_brave"
 is_clever = "is_clever"
-has_magic_wand = "has_magic_wand"
 does_fight_evil = "does_fight_evil"
-
-# Procedures
-def ask_question(character: Character, predicate: Callable):
-    fact = fact_dictionary[predicate].get(character)
-    if fact is True:
-        return True
-    elif fact is False:
-        return False
-    else:
-        return None
 
 # Rules
 def is_good_wizard(character: Character):
-    is_wizard_fact = fact_dictionary[is_wizard].get(character)
+    has_wizard_parents_fact = fact_dictionary[has_wizard_parents].get(character)
     is_brave_fact = fact_dictionary[is_brave].get(character)
     is_clever_fact = fact_dictionary[is_clever].get(character)
-    has_wand_fact = fact_dictionary[has_magic_wand].get(character)
     does_fight_evil_fact = fact_dictionary[does_fight_evil].get(character)
 
-    if (is_wizard_fact is True and is_brave_fact is True and has_wand_fact is True) \
-            or (is_clever_fact is True and is_wizard_fact is True and does_fight_evil_fact is True):
+    if(does_fight_evil_fact is False) : return False
+    
+    if ((has_wizard_parents_fact is True and is_clever_fact is True) or (has_wizard_parents_fact is True and is_brave_fact is True)) \
+            or (is_clever_fact is True and is_brave_fact is True) :
         return True
     else:
         return False
 
 # Facts
 fact_dictionary: dict[Callable, dict[Character, bool | None]] = {
-    is_wizard: {
+    has_wizard_parents: {
         harry: True,
-        hermione: True,
+        hermione: False,
         ron: True,
         draco: True,
         voldemort: True
     },
     is_brave: {},
     is_clever: {},
-    has_magic_wand: {},
     does_fight_evil: {}
 }
 
@@ -84,15 +73,6 @@ if __name__ == '__main__':
             fact_dictionary[is_clever][character] = False
         else:
             fact_dictionary[is_clever][character] = None
-
-        print(f'Does {character.name} have a magic wand?')
-        x = input()
-        if x == "yes":
-            fact_dictionary[has_magic_wand][character] = True
-        elif x == "no":
-            fact_dictionary[has_magic_wand][character] = False
-        else:
-            fact_dictionary[has_magic_wand][character] = None
 
         print(f'Does {character.name} fight evil?')
         x = input()

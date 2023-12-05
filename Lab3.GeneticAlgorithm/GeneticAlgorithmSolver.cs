@@ -4,7 +4,7 @@
     public class GeneticAlgorithmSolver
     {
         Dictionary<string, Dictionary<string, int>> groupSubjects;
-        Dictionary<string, int> teacherHours;
+        Dictionary<string, int> teacherLessons;
         Dictionary<string, List<string>> teacherSubjects;
 
         List<Individual> currentPopulation;
@@ -25,13 +25,13 @@
         Random rand;
 
         public GeneticAlgorithmSolver(int days, int maxLessonsPerDay, Dictionary<string, Dictionary<string, int>> groupSubjects,
-            Dictionary<string, int> teacherHours, Dictionary<string, List<string>> teacherSubjects)
+            Dictionary<string, int> teacherLessons, Dictionary<string, List<string>> teacherSubjects)
         {
             this.days = days;
             this.maxLessonsPerDay = maxLessonsPerDay;
 
             this.groupSubjects = groupSubjects;
-            this.teacherHours = teacherHours;
+            this.teacherLessons = teacherLessons;
             this.teacherSubjects = teacherSubjects;
 
             rand = new Random();
@@ -181,7 +181,7 @@
         private int CalculateScore(Schedule schedule)
         {
             var cur_groupSubjects = new Dictionary<string, Dictionary<string, int>>();
-            var cur_teacherHours = new Dictionary<string, int>();
+            var cur_teacherLessons = new Dictionary<string, int>();
             int overlaysProf = 0;
             int overlaysGroup = 0;
 
@@ -210,8 +210,8 @@
                     }
                     else
                     {
-                        cur_teacherHours.TryAdd(lesson.teacher, 0);
-                        cur_teacherHours[lesson.teacher]++;
+                        cur_teacherLessons.TryAdd(lesson.teacher, 0);
+                        cur_teacherLessons[lesson.teacher]++;
                         usedTeachers.Add(lesson.teacher);
                     }
                 });
@@ -231,10 +231,10 @@
                 }
             }
 
-            foreach (var teacher in teacherHours)
+            foreach (var teacher in teacherLessons)
             {
-                cur_teacherHours.TryAdd(teacher.Key, 0);
-                differenceTeacherTime += Math.Abs(cur_teacherHours[teacher.Key] - teacher.Value);
+                cur_teacherLessons.TryAdd(teacher.Key, 0);
+                differenceTeacherTime += Math.Abs(cur_teacherLessons[teacher.Key] - teacher.Value);
             }
 
             return profDiffMult * differenceTeacherTime
@@ -321,20 +321,24 @@
 
             foreach (var individual in currentPopulation)
             {
-                WriteSchedule(individual);
+                WriteSchedule(individual, currentPopulation.IndexOf(individual));
             }
         }
 
-        public void WriteSchedule(Individual individual)
+        public void WriteSchedule(Individual individual, int i)
         {
-            Console.WriteLine("");
+            Console.WriteLine("Population {0}:", i);
             Console.WriteLine("Score: {0}", individual.score);
             foreach (var lesson in individual.schedule)
             {
-                Console.WriteLine("{0}.{1} : ", lesson.Key.Item1 + 1, lesson.Key.Item2 + 1);
-                lesson.Value.ForEach(x => Console.WriteLine("{0} - {1} - {2}", x.group, x.subject, x.teacher));
+                if (lesson.Value.Any())
+                {
+                    var day = lesson.Key.Item1 + 1;
+                    Console.WriteLine("Day: {0}, lesson #{1} : ", ((DayOfWeek)day), lesson.Key.Item2 + 1);
+                    lesson.Value.ForEach(x => Console.WriteLine("group {0} - subject {1} - teacher {2}", x.group, x.subject, x.teacher));
+                }
             }
-            Console.WriteLine("");
+            Console.WriteLine("----------------");
 
         }
 
@@ -343,7 +347,7 @@
             Console.WriteLine("----------------");
             Console.WriteLine("Score: {0}", ind.score);
             var cur_groupSubjects = new SortedDictionary<string, SortedDictionary<string, int>>();
-            var cur_teacherHours = new SortedDictionary<string, int>();
+            var cur_teacherLessons = new SortedDictionary<string, int>();
             int overlaysProf = 0;
             int overlaysGroup = 0;
             foreach (var item in ind.schedule)
@@ -353,7 +357,7 @@
                 var usedGroups = new HashSet<string>();
                 lessons.ForEach(lesson =>
                 {
-                    // check for every group hours for their subjects
+                    // check for every group lessons for their subjects
                     if (usedGroups.Contains(lesson.group))
                     {
                         overlaysGroup++;
@@ -366,15 +370,15 @@
                         usedGroups.Add(lesson.group);
                     }
 
-                    // check for teachers hours and if they have two subjects at one time
+                    // check for teachers lessons and if they have two subjects at one time
                     if (usedTeachers.Contains(lesson.teacher))
                     {
                         overlaysProf++;
                     }
                     else
                     {
-                        cur_teacherHours.TryAdd(lesson.teacher, 0);
-                        cur_teacherHours[lesson.teacher]++;
+                        cur_teacherLessons.TryAdd(lesson.teacher, 0);
+                        cur_teacherLessons[lesson.teacher]++;
                         usedTeachers.Add(lesson.teacher);
                     }
                 });
@@ -388,7 +392,7 @@
                 Console.WriteLine();
             }
 
-            foreach (var req in cur_teacherHours)
+            foreach (var req in cur_teacherLessons)
             {
                 Console.WriteLine("{0} - {1}", req.Key, req.Value);
             }

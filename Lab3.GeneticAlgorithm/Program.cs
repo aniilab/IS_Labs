@@ -1,13 +1,13 @@
 ﻿using Lab3.GeneticAlgorithm;
 
 // Initial information
-int maxHoursPerDay = 8;
+int maxLessonsPerDay = 4;
 int days = 5;
-int maxWeekLoad = days * maxHoursPerDay;
-var groupSubjects = new Dictionary<string, Dictionary<string, int>>() { { "TTP41", new Dictionary<string, int>() { { "IS", 10 }, { "MPO", 12 }, { "IT", 6 } } },
-                                                                        { "TTP42", new Dictionary<string, int>() { { "IS", 12 }, { "MPO", 8 }, { "IT", 6 } } } };
+int maxWeekLoad = days * maxLessonsPerDay;
+var groupSubjects = new Dictionary<string, Dictionary<string, int>>() { { "TTP41", new Dictionary<string, int>() { { "IS", 3 }, { "MPO", 2 }, { "IT", 1 } } },
+                                                                        { "TTP42", new Dictionary<string, int>() { { "IS", 2 }, { "MPO", 2 }, { "IT", 1 } } } };
 
-var teacherHours = new Dictionary<string, int>() { { "Shevchenko", 30 }, { "Petrenko", 40 } };
+var teacherLessons = new Dictionary<string, int>() { { "Shevchenko", 10 }, { "Petrenko", 15 } };
 
 var teacherSubjects = new Dictionary<string, List<string>>() { { "IS", new List<string>(){ "Petrenko", "Shevchenko" } },
                                                                { "MPO", new List<string>(){ "Shevchenko" } },
@@ -17,26 +17,26 @@ foreach (var item in groupSubjects)
 {
     Console.WriteLine("Group {0}:", item.Key);
     foreach (var x in item.Value)
-        Console.WriteLine("Subject {0} : {1} hours", x.Key, x.Value);
+        Console.WriteLine("Subject {0} : {1} lessons", x.Key, x.Value);
     Console.WriteLine();
 }
 Console.WriteLine();
 
-foreach (var item in teacherHours)
+foreach (var item in teacherLessons)
 {
-    Console.WriteLine("Teacher {0} - {1} hours/week", item.Key, item.Value);
+    Console.WriteLine("Teacher {0} - {1} lessons/week", item.Key, item.Value);
 }
 Console.WriteLine();
 
 
 foreach (var item in teacherSubjects)
 {
-    Console.WriteLine("Teacher {0}:", item.Key);
+    Console.WriteLine("Subject {0}:", item.Key);
     item.Value.ForEach(s => Console.WriteLine("\t{0}", s));
     Console.WriteLine();
 }
 
-var geneticAlgorithmSolver = new GeneticAlgorithmSolver(days, maxHoursPerDay, groupSubjects, teacherHours, teacherSubjects);
+var geneticAlgorithmSolver = new GeneticAlgorithmSolver(days, maxLessonsPerDay, groupSubjects, teacherLessons, teacherSubjects);
 geneticAlgorithmSolver.WritePopulation();
 
 int i = 0;
@@ -44,10 +44,9 @@ while (geneticAlgorithmSolver.ChooseBest().score != 0)
 {
     i++;
     geneticAlgorithmSolver.NextPopulation();
-    geneticAlgorithmSolver.WritePopulation();
 }
 int populationCount = i;
 
+geneticAlgorithmSolver.WritePopulation();
 
-geneticAlgorithmSolver.WriteSummary(geneticAlgorithmSolver.ChooseBest());
 Console.WriteLine("Population count = {0}", populationCount);
