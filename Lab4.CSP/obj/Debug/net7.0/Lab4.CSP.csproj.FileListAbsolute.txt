@@ -1,0 +1,14 @@
+D:\Uni\4th\IS\IS_Labs\Lab4.CSP\obj\Debug\net7.0\Lab4.CSP.GeneratedMSBuildEditorConfig.editorconfig
+D:\Uni\4th\IS\IS_Labs\Lab4.CSP\obj\Debug\net7.0\Lab4.CSP.AssemblyInfoInputs.cache
+D:\Uni\4th\IS\IS_Labs\Lab4.CSP\obj\Debug\net7.0\Lab4.CSP.AssemblyInfo.cs
+D:\Uni\4th\IS\IS_Labs\Lab4.CSP\obj\Debug\net7.0\Lab4.CSP.csproj.CoreCompileInputs.cache
+D:\Uni\4th\IS\IS_Labs\Lab4.CSP\bin\Debug\net7.0\Lab4.CSP.exe
+D:\Uni\4th\IS\IS_Labs\Lab4.CSP\bin\Debug\net7.0\Lab4.CSP.deps.json
+D:\Uni\4th\IS\IS_Labs\Lab4.CSP\bin\Debug\net7.0\Lab4.CSP.runtimeconfig.json
+D:\Uni\4th\IS\IS_Labs\Lab4.CSP\bin\Debug\net7.0\Lab4.CSP.dll
+D:\Uni\4th\IS\IS_Labs\Lab4.CSP\bin\Debug\net7.0\Lab4.CSP.pdb
+D:\Uni\4th\IS\IS_Labs\Lab4.CSP\obj\Debug\net7.0\Lab4.CSP.dll
+D:\Uni\4th\IS\IS_Labs\Lab4.CSP\obj\Debug\net7.0\refint\Lab4.CSP.dll
+D:\Uni\4th\IS\IS_Labs\Lab4.CSP\obj\Debug\net7.0\Lab4.CSP.pdb
+D:\Uni\4th\IS\IS_Labs\Lab4.CSP\obj\Debug\net7.0\Lab4.CSP.genruntimeconfig.cache
+D:\Uni\4th\IS\IS_Labs\Lab4.CSP\obj\Debug\net7.0\ref\Lab4.CSP.dll

@@ -3,11 +3,10 @@
 public class GeneticAlgorithm
 {
     private static readonly Random rand = new Random();
-    private const int nIter = 100;
-    private const int nPop = 100;
-    private const int nClasses = 4;
-    private const double rCross = 0.9;
-    private const double rMut = 0.1;
+    private const int nIter = 2;
+    private const int nPop = 2;
+    private const int nClasses = 3;
+    private const double rMut = 0.9;
     private static readonly string[] days = { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" };
     private static readonly string[] subjects = { "IS", "Mobs", "IT", "MIT" };
     private static List<Teacher> teachers;
